@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="//imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.css" rel="stylesheet">
+ 		<script src="//imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.min.js"></script>
+ 		<script src="//imgcache.qq.com/open/qcloud/video/tcplayer/lib/hls.min.0.8.8.js"></script>
+ 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Rc0Rehn9y1omW2s2y0a6zmfzGxPAh2va"></script>	
+		<style>
+			*{padding:0px;margin: 0px;color#333}
+			#head{position: relative;}
+			.swiper-slide img{width:100%}
+ 			.swiper-slide .text{position: absolute;top:40%;width:100%;text-align: center;}
+ 			.swiper-slide .text h1{color: white;background:rgba(0,155,187,0.4);width:20%;margin: 1rem auto;
+ 				font-size: 2rem;padding:0.5rem;z-index: 4;}
+ 			.swiper-slide .text p{color: white;width:60%;margin: auto;letter-spacing: 0.2rem;line-height: 2rem;}			
+			.shade{background:rgba(0,0,0,0.5);position:absolute;height:100%;width:100%;top:0}
+			.nav{position: absolute;z-index:2;top:8%;right:8%;font-size: 1.2rem;display: flex;}
+ 			.nav>a{text-decoration: none;color:white;padding:1rem}
+ 			.nav>a:hover{border-bottom: 4px solid red;color:#ADD8E6}
+
+ 			#about{background: url(images/ba1.jpg) no-repeat fixed;background-size:100%;}
+ 			.video{width:80%;margin: auto;background: rgba(238,238,238,1);border:4px solid white;}
+ 			.video h2{text-align: center;font-family:"微软雅黑";color: #cdba96;padding:1rem;font-size: 3rem;}
+ 			.video p{text-indent: 3rem;letter-spacing: 0.2rem;line-height: 2rem;padding:0 2rem 0 2rem}
+ 			.player-size {float:left;margin: 1rem 1rem 0 0;}
+ 			.idea{width:80%;border:4px solid white;background: rgba(238,238,238,1);margin: 1rem auto;
+ 			display: flex;justify-content: space-around;padding:1rem 0 1rem 0}
+ 			.welcome-text{width:18rem;height:18rem;background: white;border-radius: 9rem;text-align:center;}
+ 			.welcome-text h4{padding:3rem;font-size: 3rem;}
+ 			
+ 			.ceo{width:80%;border:5px solid white;background: rgba(238,238,238,1);margin: 1rem auto;display: flex;}
+ 			.ceo h5{font-size: 2rem;text-align: center;}
+ 			.ceo_info{padding:0 2rem 0 2rem;line-height: 3rem;}
+			.img-responsive{width:100%;height:100%}
+			
+			#story{background: rgba(238,238,238,1);text-align: center;display: flex;flex-direction: column;}
+			.s-title{padding:1rem;color: #cdba96;font-size: 3rem;}
+			.line{display: flex;width:80%;margin: auto;justify-content: space-between;}
+			.line>div{display:flex;margin:1rem;border:4px solid white;width:50%;height: 16rem;}
+			.line>div>div{width:50%;}
+			.line>div img{width:100%;height:100%}
+			.line>div .con{background: #cdba96;width:100%;height:100%;color:white}
+			.line>div .con h2{color:white;padding:1rem}
+			.line>div .con p{color:white;padding:1rem}
+			
+			#info{background: url(images/ba1.jpg) no-repeat fixed;background-size:120%;}
+			.info_con{width:80%;margin:auto;padding-bottom: 2rem;}
+			.info_title{color: #cdba96;text-align: center;font-size: 3rem;background:rgba(238,238,238,1)}
+			.info_item{display: flex;background: rgba(238,238,238,1);border:4px solid #fff;margin:1rem;}
+			.info_item img{width:24rem;height:100%}
+			.info_item_right{border-left: 3px solid #cdba96;padding:1rem;margin:2rem;line-height: 2rem;}
+			
+			#downLoad{background:rgba(238,238,238,1);display: flex;justify-content:center}
+			.downLoad{padding:5rem}
+			.downLoad img{width:20rem;height:20rem;margin: auto;}
+			.downLoad h4{text-align: center;padding: 1rem;font-size: 2rem;}
+			
+			#contact{background:rgba(238,238,238,1);}
+			.link{text-align:center;font-size: 3rem;}
+			.contact{width:80%;margin: auto;display: flex;}
+			.contact h4{font-size: 3rem;}
+			.contact_item{width:50%;margin: 2rem;}
+			.contact_item h4,.contact_item p{border-bottom: 2px solid grey;padding:2rem;}			
+			.foot{background: #313131;color:#FFFFFF;padding:5rem 0 1rem 0;text-align: center;}
+			.foot_nav a{color:#cdba96;padding:1rem;}
+			.foot p{padding:2rem}
+			.changeBorder{
+				border:4px solid white;
+				transition: all 1s;
+			}
+			.changeBorder:hover{
+				border:4px solid black;
+				transition: all 1s;
+			}
+					
+    		@media screen and (min-width: 1440px) {
+		    	html {
+		        	font-size: 16px;
+		    	}
+			}
+			@media screen and (min-width:1024px) and (max-width:1440px) {
+		        html {
+		        	font-size: 14px;
+		    	}
+			}
+			@media screen and (min-width:800px) and (max-width:1024px) {
+		        html {
+		        	font-size: 12px;
+		    	}
+			}						
+			@media screen and (max-width:800px) {
+		        html {
+		        	font-size: 8px;
+		    	}
+				.video{width:100%;border:5px solid black;border:none}
+				.player-size {float: none;width:100%}
+				.idea{width:100%;border:none;flex-wrap: wrap;}
+				.ceo{width:100%;border:none;}
+				.line{display: flex;width:100%;flex-wrap: wrap;}
+				.line>div{width:100%;}
+				.info_con{width:100%;}
+				.info_item{margin:0}
+				#downLoad{flex-wrap: wrap;}
+				.downLoad{width:100%;text-align: center;}
+				.contact{width:100%;margin: auto;display: flex;}
+			}			
+		</style>
+	</head>
+	<body>
+		<!-- 头部导航-->
+		<div id="head">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			    	<div class="swiper-slide" >
+			    		<img src="images/bg1.jpg">
+			    		<div class="shade"><!--遮罩层--></div>
+					    <div class="text">
+			    			<h1>我们是谁</h1>
+			    			<p>烘焙先锋一站式电商平台隶属于沃纳德信息科技有限公司，是一个专注于烘焙业的电商平台，平台创始人：管红红
+			    			烘焙先锋首席CEO</p>
+			    		</div>	    		
+			    	</div>
+			    	<div class="swiper-slide" >
+			    		<img src="images/bg2.jpg">
+			    		<div class="shade"><!--遮罩层--></div>
+			    		<div class="text">
+			    			<h1>我们的优势</h1>
+			    			<p>平台本着为买家省钱，为商家赚钱的宗旨，为千家万户饼店提供优质的服务和资源，目前业务范围已经遍及十几个省份</p>
+			    		</div>
+			    	</div>
+			    	<div class="swiper-slide" >
+			    		<img src="images/bg3.jpg">
+			    		<div class="shade"><!--遮罩层--></div>
+			    		<div class="text">
+			    			<h1>我们的理念</h1>
+			    			<p>期望，行为，思维，结果-一直是我们团队的理念，让我们一起携手共进，你的满意是给与我们的最大支持</p>
+			    		</div>
+			    	</div>
+			    	<div class="swiper-slide" >
+			    		<img src="images/bg4.jpg">
+			    		<div class="shade"><!--遮罩层--></div>
+			    		<div class="text">
+			    			<h1>我们的优惠服务</h1>
+			    			<p>商家申请入驻烘焙先锋平台即可享受平台的所有优惠政策，包括首页推广，活动海报设计，店铺搭建，装修，一站式服务，给你最满意的体验</p>
+			    		</div>
+			    	</div>				    	
+			    </div>
+			</div>			
+			<div class="nav fadeInLeft">
+				<a href="#index">首页</a>
+				<a href="#about">公司介绍</a>
+				<a href="#story">品牌故事</a>
+				<a href="#info">展会资讯</a>
+				<a href="#downLoad">下载APP</a>
+				<a href="#contact">联系我们</a>			
+			</div>
+		</div>
+		<!-- 关于公司-->
+		<div id="about">
+			<div class="video">
+				<h2>关于我们</h2>
+				<p>烘焙先锋隶属沃纳德信息科技有限公司，公司成立于2017年，坐落在美丽的城市-苏州市，在创世人管总的带领下，短短一年的时间，烘焙先锋业务已经遍布全国十几个省份
+					为千万家饼店提供最优质的服务，公司是一只年轻的团队，都是90后的年轻人，我们本着为客户省钱，为商家挣钱的宗旨，将更多的优惠政策发放给客户和商家
+					6.18正式确定为我平台的活动日，届时，全场秒杀价，</p>
+				<div>
+					<video id="player-container-id" class="player-size" webkit-playinline x5-playinline>
+					</video>
+					<p>公司的服务范围包含：巧克力装饰件，精品装饰，烘焙原材料，半成品，烘焙器具，烘焙服饰，烘焙包装等，商品期全，真的是应有尽有，价格优惠，
+						还有许多的烘焙教学视频等你呦，在这里，烘焙大师与你一对一指导，下一个烘焙达人就是你！你还等什么，心动不如行动，赶紧拿起你手中的电话拨打页面底部的手机号码
+						或者扫描关注我们的公众号，你将会收获到意向不到的惊喜！！！<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;对于商家：我们提供了更加优惠的服务和政策，
+						正真实现了0元入驻，将后台的所有权限发放给你，
+						有的商家会说，你们这平台怎么上商品，我们有没有淘宝的经验!这都不是问题，我们会有专业人员，教你怎样来一步一步搭建属于你自己的个性化店铺，在这里一切都变得so easy
+					</p>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+			<div class="idea">
+				<div class="welcome-text fadeInLeft changeBorder">
+					<h4>期望</h4>
+					<p>有理想必须要实现的</p>
+				</div>		
+				<div class="welcome-text fadeInRight changeBorder">
+					<h4>思维</h4>
+					<p>大胆地去向，细腻地执行</p>
+				</div>
+				<div class="welcome-text fadeInLeft changeBorder">
+					<h4>行为</h4>
+					<p>百分百地全力以赴去执行</p>
+				</div>
+				<div class="welcome-text fadeInRight changeBorder">
+					<h4>结果</h4>
+					<p>以结果为导向</p>
+				</div>			
+			</div>
+			<div class="ceo">
+				<div class="fadeInRight">
+					<img src="images/guanhonghong.png" class="img-responsive" alt=""/>
+				</div>
+				
+				<div class="ceo_info fadeInLeft">
+					<h5>管红红</h5>
+					<p>简介：
+						烘焙先锋CEO，2006至今从事烘焙行业（营销及管理业务）走访饼店千余家，实习经验与大家分享，擅长：团队管理与执行力
+						中国采购四级管理师,
+						中国茶艺中级管理师,
+						食品安全管理体系内审员,
+						内部金牌讲师
+						<br/>
+						擅长：
+						案列解析分享,
+						公司体系管理,
+						问题解决的方案,
+						提高执行力<br />
+						经验：<br />
+						1：任职于饼店店长2年<br />
+						2：从事采购8年<br />
+						3：从事营销5年
+					</p>
+				</div>				
+			</div>
+		</div>
+		<!-- 品牌故事-->
+		<div id="story">
+			<h2 class="s-title">品牌故事</h2>
+				<div class="line">
+						<div class="fadeInRight changeBorder">
+							<div>
+								<img src="images/log_hbxf.png"/>
+							</div>
+							<div class="con">
+								<h2>创始人：管红红</h2>
+								<p>烘焙先锋一站式电商平台，本着为消费者省钱，为商家赚钱的宗旨，业务覆盖全国20个省，</p>
+							</div>
+						</div>
+						<div class="fadeInLeft changeBorder">
+							<div>
+								<img src="images/log_7k.jpg"/>
+							</div>
+							<div class="con">
+								<h2>7K蛋糕</h2>
+								<p>很多人还不知道7K蛋糕，它源自一个普通的梦想，它的味道，故事和名字， 同所有纯正的蛋糕一样，7K使用真正的乳脂奶油，杜绝任何香精和防腐剂</p>
+							</div>
+						</div>					
+				</div>
+				<div class="line">
+						<div class="fadeInRight changeBorder">
+							<div class="con">
+								<h2>逸馨坊蛋糕创始人</h2>
+								<p>马国仁，是逸馨坊蛋糕连锁机构的负责人，到目前为止我们已发展成为以一家集生产、销售、研发为一体的连锁烘焙食品企业</p>
+							</div>
+							<div>
+								<img src="images/log_yxf.jpg"/>
+							</div>					
+						</div>	
+						<div class="fadeInLeft changeBorder">
+							<div class="con">
+								<h2>仟年烘焙</h2>
+								<p>一念执着，坚持最初的想法！ 仟年蛋糕襄阳20多年的实体口啤老店！因为专一所以专注！专业定做各种场合的主题蛋糕</p>
+							</div>
+							<div>
+								<img src="images/log_qn.jpg"/>
+							</div>					
+						</div>					
+				</div>	
+		</div>
+		<!-- 展会资讯-->
+		<div id="info">
+			<h2 class="info_title">展会资讯</h2>
+			<div class="info_con">
+				<div class="info_item changeBorder">
+					<div>
+						<img src="images/info1.jpg"/>
+					</div>
+					<div class="info_item_right">
+						<p style="color: #cdba96">时间：2018/6/21 - 6/23</p>
+						<h4>成都世纪城国际会展中心</h4>
+						<p>地点：成都市武侯区世纪城路198号</p>
+					</div>
+				</div>
+				<div class="info_item changeBorder">
+					<div>
+						<img src="images/info2.png"/>
+					</div>
+					<div class="info_item_right">
+						<p style="color: #cdba96">时间：2018/6/27 - 6/29</p>
+						<h4>北京新国际会展中心</h4>
+						<p>地点：朝阳区天辰东路7号</p>
+					</div>
+				</div>
+				<div class="info_item changeBorder">
+					<div>
+						<img src="images/info3.jpg"/>
+					</div>
+					<div class="info_item_right">
+						<p style="color: #cdba96">时间：2018/10/26 - 10/28</p>
+						<h4>西安曲江国际会展中心</h4>
+						<p>地点：西安市雁塔区雁展路1号</p>
+					</div>
+				</div>				
+			</div>		
+		</div>
+		<div id="downLoad">
+			<div class="downLoad">
+				<h4>下载App</h4>
+				<img src="images/appCode.jpg"/>		
+			</div>
+			<div div class="downLoad">
+				<h4>关注公众号</h4>
+				<img src="images/wx.jpg"/>	
+			</div>
+		</div>
+		<!-- 联系方式-->
+		<div id="contact">
+			<h4 class="link">联系方式</h4>
+			<div class="contact">
+				<div class="contact_item">
+						<h4>管红红(CEO)</h4>
+						<p>Phone:<a href="tel:18100670067">18100670067</a></p>
+						<p>Email:<a href="mailto:1317367170@qq.com">1317367170@qq.com</a></p>
+						<p>Address:<span>苏州市吴中经济开发区枫津南路22号2幢2楼</span></p>
+				</div>
+				<div class="contact_item">
+						<h4>姚艳华(经理)</h4>
+						<p>Phone:<a href="tel:18013112679">18013112679</a></p>
+						<p>Email:<a href="mailto:506857740@qq.com">506857740@qq.com</a></p>
+						<p>Address:<span>苏州市吴中经济开发区枫津南路22号2幢2楼</span></p>				
+				</div>				
+			</div>
+			<hr />
+			<div id="allmap" style="height:50rem"></div>
+		</div>
+		<!-- 底部菜单-->
+		<div class="foot">
+			<div class="foot_nav">
+				<a href="#index">首页</a>
+				<a href="#about">公司介绍</a>
+				<a href="#story">品牌故事</a>
+				<a href="#info">展会资讯</a>
+				<a href="#downLoad">下载APP</a>
+				<a href="#contact">联系我们</a>			
+			</div>
+			<p>@ 2017-2018 hongbeixianfeng.com</p>
+		</div>
+		<input>
+	</body>
+	<script type="text/javascript">
+		// 百度地图API功能
+		var map = new BMap.Map("allmap");    // 创建Map实例
+		var point = new BMap.Point(120.644937,31.238606); 
+		map.centerAndZoom(point, 11);  // 初始化地图,设置中心点坐标和地图级别
+		//添加地图类型控件
+		map.addControl(new BMap.MapTypeControl({
+			mapTypes:[
+	            BMAP_NORMAL_MAP,
+	            BMAP_HYBRID_MAP
+	        ]}));	
+	    map.addControl(new BMap.NavigationControl());
+	    map.addControl(new BMap.NavigationControl());    
+		map.addControl(new BMap.ScaleControl());    
+		map.addControl(new BMap.OverviewMapControl());    
+		map.addControl(new BMap.MapTypeControl());   
+var marker = new BMap.Marker(point);        // 创建标注    
+map.addOverlay(marker);                     // 将标注添加到地图中  
+var opts = {    
+    width : 250,     // 信息窗口宽度    
+    height: 100,     // 信息窗口高度    
+    title : "烘焙先锋"  // 信息窗口标题   
+}    
+var content="地址：苏州市吴中区枫津路<br/>地址：电话：18100670067";
+var infoWindow = new BMap.InfoWindow(content, opts);  // 创建信息窗口对象    
+map.openInfoWindow(infoWindow, map.getCenter());      // 打开信息窗口
+		map.setCurrentCity("苏州");          // 设置地图显示的城市 此项是必须设置的
+		//map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	</script>	
+	<script>		
+		var player = TCPlayer('player-container-id', { // player-container-id 为播放器容器ID，必须与html中一致
+		    fileID: '7447398156018586734', // 请传入需要播放的视频filID 必须
+		    appID: '1254227509', // 请传入点播账号的appID 必须
+		    plugins:{
+		        ContinuePlay: { // 开启续播功能
+		          //auto: true, //[可选] 是否在视频播放后自动续播
+		          // text:'上次播放至 ', //[可选] 提示文案
+		          // btnText: '恢复播放' //[可选] 按钮文案
+		        },
+		      }
+		  });
+	</script>
+	<script>        
+		  var mySwiper = new Swiper ('.swiper-container', {
+		  	autoHeight: true, //高度随内容变化
+		  	autoplay: {
+				delay: 3000,//1秒切换一次
+			},
+		  	speed:1000,
+		    direction: 'horizontal',
+		    effect : 'fade',//淡入淡出
+		    loop: true, 
+		    //执行的回调函数
+		    on:{
+		      init: function(){
+		      }
+		    }
+		  })        
+	</script>
+</html>
