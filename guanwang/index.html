@@ -3,15 +3,18 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8" />
-		<title></title>
+		<title>烘焙先锋一站式电商平台</title>
+		<meta name="keywords" content="烘焙,蛋糕,巧克力,奶油">
+		<meta name="description" content="烘焙先锋一站式电商平台，是一个为买家省钱，为卖家挣钱的专业型平台"/>
 		<link href="//imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
  		<script src="//imgcache.qq.com/open/qcloud/video/tcplayer/tcplayer.min.js"></script>
- 		<script src="//imgcache.qq.com/open/qcloud/video/tcplayer/lib/hls.min.0.8.8.js"></script>
- 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+ 		<script src="//imgcache.qq.com/open/qcloud/video/tcplayer/lib/hls.min.0.8.8.js"></script>		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
 		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Rc0Rehn9y1omW2s2y0a6zmfzGxPAh2va"></script>	
 		<style>
 			*{padding:0px;margin: 0px;color#333}
+			/*首页*/
 			#head{position: relative;}
 			.swiper-slide img{width:100%}
  			.swiper-slide .text{position: absolute;top:40%;width:100%;text-align: center;}
@@ -22,7 +25,7 @@
 			.nav{position: absolute;z-index:2;top:8%;right:8%;font-size: 1.2rem;display: flex;}
  			.nav>a{text-decoration: none;color:white;padding:1rem}
  			.nav>a:hover{border-bottom: 4px solid red;color:#ADD8E6}
-
+			/*关于我们*/
  			#about{background: url(images/ba1.jpg) no-repeat fixed;background-size:100%;}
  			.video{width:80%;margin: auto;background: rgba(238,238,238,1);border:4px solid white;}
  			.video h2{text-align: center;font-family:"微软雅黑";color: #cdba96;padding:1rem;font-size: 3rem;}
@@ -32,40 +35,41 @@
  			display: flex;justify-content: space-around;padding:1rem 0 1rem 0}
  			.welcome-text{width:18rem;height:18rem;background: white;border-radius: 9rem;text-align:center;}
  			.welcome-text h4{padding:3rem;font-size: 3rem;}
- 			
+			/*关于我们_创始人介绍*/
  			.ceo{width:80%;border:5px solid white;background: rgba(238,238,238,1);margin: 1rem auto;display: flex;}
  			.ceo h5{font-size: 2rem;text-align: center;}
  			.ceo_info{padding:0 2rem 0 2rem;line-height: 3rem;}
 			.img-responsive{width:100%;height:100%}
-			
+			/*品牌故事*/
 			#story{background: rgba(238,238,238,1);text-align: center;display: flex;flex-direction: column;}
 			.s-title{padding:1rem;color: #cdba96;font-size: 3rem;}
 			.line{display: flex;width:80%;margin: auto;justify-content: space-between;}
-			.line>div{display:flex;margin:1rem;border:4px solid white;width:50%;height: 16rem;}
+			.line>div{display:flex;margin:1rem;border:4px solid white;width:50%;}
 			.line>div>div{width:50%;}
 			.line>div img{width:100%;height:100%}
 			.line>div .con{background: #cdba96;width:100%;height:100%;color:white}
 			.line>div .con h2{color:white;padding:1rem}
 			.line>div .con p{color:white;padding:1rem}
-			
+			/*展会资讯*/
 			#info{background: url(images/ba1.jpg) no-repeat fixed;background-size:120%;}
 			.info_con{width:80%;margin:auto;padding-bottom: 2rem;}
 			.info_title{color: #cdba96;text-align: center;font-size: 3rem;background:rgba(238,238,238,1)}
 			.info_item{display: flex;background: rgba(238,238,238,1);border:4px solid #fff;margin:1rem;}
 			.info_item img{width:24rem;height:100%}
 			.info_item_right{border-left: 3px solid #cdba96;padding:1rem;margin:2rem;line-height: 2rem;}
-			
+			/*下载*/
 			#downLoad{background:rgba(238,238,238,1);display: flex;justify-content:center}
 			.downLoad{padding:5rem}
 			.downLoad img{width:20rem;height:20rem;margin: auto;}
 			.downLoad h4{text-align: center;padding: 1rem;font-size: 2rem;}
-			
+			/*联系我们*/
 			#contact{background:rgba(238,238,238,1);}
-			.link{text-align:center;font-size: 3rem;}
+			.link{font-size: 2rem;color:#CDBA96;text-align: center;}
 			.contact{width:80%;margin: auto;display: flex;}
 			.contact h4{font-size: 3rem;}
 			.contact_item{width:50%;margin: 2rem;}
-			.contact_item h4,.contact_item p{border-bottom: 2px solid grey;padding:2rem;}			
+			.contact_item h4,.contact_item p{border-bottom: 2px solid grey;padding:2rem;}	
+			/*底部菜单*/		
 			.foot{background: #313131;color:#FFFFFF;padding:5rem 0 1rem 0;text-align: center;}
 			.foot_nav a{color:#cdba96;padding:1rem;}
 			.foot p{padding:2rem}
@@ -76,8 +80,7 @@
 			.changeBorder:hover{
 				border:4px solid black;
 				transition: all 1s;
-			}
-					
+			}					
     		@media screen and (min-width: 1440px) {
 		    	html {
 		        	font-size: 16px;
@@ -121,8 +124,9 @@
 			    		<div class="shade"><!--遮罩层--></div>
 					    <div class="text">
 			    			<h1>我们是谁</h1>
-			    			<p>烘焙先锋一站式电商平台隶属于沃纳德信息科技有限公司，是一个专注于烘焙业的电商平台，平台创始人：管红红
-			    			烘焙先锋首席CEO</p>
+			    			<p>烘焙先锋一站式电商平台隶属于苏州沃纳德信息科技有限公司，是一个专注于烘焙业的电商平台，
+			    			平台创始人：管红红，主要方向为：烘焙类原材料和半成品，烘焙服饰，烘焙器具，以及烘焙课程
+			    			应有尽有</p>
 			    		</div>	    		
 			    	</div>
 			    	<div class="swiper-slide" >
@@ -186,7 +190,7 @@
 				</div>		
 				<div class="welcome-text fadeInRight changeBorder">
 					<h4>思维</h4>
-					<p>大胆地去向，细腻地执行</p>
+					<p>大胆地去想，细腻地执行</p>
 				</div>
 				<div class="welcome-text fadeInLeft changeBorder">
 					<h4>行为</h4>
@@ -316,16 +320,14 @@
 		</div>
 		<!-- 联系方式-->
 		<div id="contact">
-			<h4 class="link">联系方式</h4>
+			<h4 class="link">联系我们</h4>
 			<div class="contact">
 				<div class="contact_item">
-						<h4>管红红(CEO)</h4>
 						<p>Phone:<a href="tel:18100670067">18100670067</a></p>
 						<p>Email:<a href="mailto:1317367170@qq.com">1317367170@qq.com</a></p>
 						<p>Address:<span>苏州市吴中经济开发区枫津南路22号2幢2楼</span></p>
 				</div>
 				<div class="contact_item">
-						<h4>姚艳华(经理)</h4>
 						<p>Phone:<a href="tel:18013112679">18013112679</a></p>
 						<p>Email:<a href="mailto:506857740@qq.com">506857740@qq.com</a></p>
 						<p>Address:<span>苏州市吴中经济开发区枫津南路22号2幢2楼</span></p>				
