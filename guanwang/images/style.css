@@ -82,11 +82,13 @@
 		    	.nav{display: none;}
 		    	.swiper-slide .text{top:10%}
 		    	.swiper-slide .text h1{font-size: 1rem;}
+		    	.swiper-slide .text p{width:70%;}
 				.video{width:100%;border:5px solid black;border:none}
 				.player-size {float: none;width:100%}
 				.idea{width:100%;border:none;flex-wrap: wrap;}
 				.welcome-text{width:22rem;height:22rem;border-radius: 11rem;}
 				.ceo{width:100%;border:none;}
+				.ceo_info{line-height: 2rem;}
 				.line{display: flex;width:100%;flex-wrap: wrap;}
 				.line>div{width:100%;}
 				.info_con{width:100%;}
