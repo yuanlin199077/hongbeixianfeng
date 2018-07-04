@@ -1,0 +1,99 @@
+			*{padding:0px;margin: 0px;color#333}
+			/*首页*/
+			#head{position: relative;}
+			.swiper-slide img{width:100%}
+ 			.swiper-slide .text{position: absolute;top:40%;width:100%;text-align: center;}
+ 			.swiper-slide .text h1{color: white;background:rgba(0,155,187,0.4);width:20%;margin: 1rem auto;
+ 				font-size: 2rem;padding:0.5rem;z-index: 4;}
+ 			.swiper-slide .text p{color: white;width:60%;margin: auto;letter-spacing: 0.2rem;line-height: 2rem;}			
+			.shade{background:rgba(0,0,0,0.5);position:absolute;height:100%;width:100%;top:0}
+			.nav{position: absolute;z-index:2;top:8%;right:8%;font-size: 1.2rem;display: flex;}
+ 			.nav>a{text-decoration: none;color:white;padding:1rem}
+ 			.nav>a:hover{border-bottom: 4px solid red;color:#ADD8E6}
+			/*关于我们*/
+ 			#about{background: url(ba1.jpg) no-repeat fixed;background-size:100%;}
+ 			.video{width:80%;margin: auto;background: rgba(238,238,238,1);border:4px solid white;}
+ 			.video h2{text-align: center;font-family:"微软雅黑";color: #cdba96;padding:1rem;font-size: 3rem;}
+ 			.video p{text-indent: 3rem;letter-spacing: 0.2rem;line-height: 2rem;padding:0 2rem 0 2rem}
+ 			.player-size {float:left;margin: 1rem 1rem 0 0;}
+ 			.idea{width:80%;border:4px solid white;background: rgba(238,238,238,1);margin: 1rem auto;
+ 			display: flex;justify-content: space-around;padding:1rem 0 1rem 0}
+ 			.welcome-text{width:18rem;height:18rem;background: white;border-radius: 9rem;text-align:center;}
+ 			.welcome-text h4{padding:3rem;font-size: 3rem;}
+			/*关于我们_创始人介绍*/
+ 			.ceo{width:80%;border:5px solid white;background: rgba(238,238,238,1);margin: 1rem auto;display: flex;}
+ 			.ceo h5{font-size: 2rem;text-align: center;}
+ 			.ceo_info{padding:0 2rem 0 2rem;line-height: 3rem;}
+			.img-responsive{width:100%;height:100%}
+			/*品牌故事*/
+			#story{background: rgba(238,238,238,1);text-align: center;display: flex;flex-direction: column;}
+			.s-title{padding:1rem;color: #cdba96;font-size: 3rem;}
+			.line{display: flex;width:80%;margin: auto;justify-content: space-between;}
+			.line>div{display:flex;margin:1rem;border:4px solid white;width:50%;}
+			.line>div>div{width:50%;}
+			.line>div img{width:15rem;height:15rem}
+			.line>div .con{background: #cdba96;width:100%;height:100%;color:white}
+			.line>div .con h2{color:white;padding:1rem}
+			.line>div .con p{color:white;padding:1rem}
+			/*展会资讯*/
+			#info{background: url(ba1.jpg) no-repeat fixed;background-size:120%;}
+			.info_con{width:80%;margin:auto;padding-bottom: 2rem;}
+			.info_title{color: #cdba96;text-align: center;font-size: 3rem;background:rgba(238,238,238,1)}
+			.info_item{display: flex;background: rgba(238,238,238,1);border:4px solid #fff;margin:1rem;}
+			.info_item img{width:24rem;height:100%}
+			.info_item_right{border-left: 3px solid #cdba96;padding:1rem;margin:2rem;line-height: 2rem;}
+			/*下载*/
+			#downLoad{background:rgba(238,238,238,1);display: flex;justify-content:center}
+			.downLoad{padding:5rem}
+			.downLoad img{width:20rem;height:20rem;margin: auto;}
+			.downLoad h4{text-align: center;padding: 1rem;font-size: 2rem;}
+			/*联系我们*/
+			#contact{background:rgba(238,238,238,1);}
+			.link{font-size: 2rem;color:#CDBA96;text-align: center;}
+			.contact{width:80%;margin: auto;display: flex;}
+			.contact h4{font-size: 3rem;}
+			.contact_item{width:50%;margin: 2rem;}
+			.contact_item h4,.contact_item p{border-bottom: 2px solid grey;padding:2rem;}	
+			/*底部菜单*/		
+			.foot{background: #313131;color:#FFFFFF;padding:5rem 0 1rem 0;text-align: center;}
+			.foot_nav a{color:#cdba96;padding:1rem;}
+			.foot p{padding:2rem}
+			.changeBorder{
+				border:4px solid white;
+				transition: all 1s;
+			}
+			.changeBorder:hover{
+				border:4px solid black;
+				transition: all 1s;
+			}					
+    		@media screen and (min-width: 1440px) {
+		    	html {
+		        	font-size: 16px;
+		    	}
+			}
+			@media screen and (min-width:1024px) and (max-width:1440px) {
+		        html {
+		        	font-size: 14px;
+		    	}
+			}
+			@media screen and (min-width:800px) and (max-width:1024px) {
+		        html {
+		        	font-size: 12px;
+		    	}
+			}						
+			@media screen and (max-width:800px) {
+		        html {
+		        	font-size: 10px;
+		    	}
+				.video{width:100%;border:5px solid black;border:none}
+				.player-size {float: none;width:100%}
+				.idea{width:100%;border:none;flex-wrap: wrap;}
+				.ceo{width:100%;border:none;}
+				.line{display: flex;width:100%;flex-wrap: wrap;}
+				.line>div{width:100%;}
+				.info_con{width:100%;}
+				.info_item{margin:0}
+				#downLoad{flex-wrap: wrap;}
+				.downLoad{width:100%;text-align: center;}
+				.contact{width:100%;margin: auto;display: flex;}
+			}	
