@@ -88,7 +88,7 @@
 				.player-size {float: none;width:100%}
 				.idea{width:100%;border:none;flex-wrap: wrap;flex-direction:column;}
 				.idea_line{justify-content:space-around;width: 100%;}
-				welcome-text{width:10rem;height:10rem;border-radius: 5rem;}
+				.welcome-text{width:14rem;height:14rem;border-radius: 7rem;}
 				.ceo{width:100%;border:none;}
 				.ceo_info{line-height: 2rem;}
 				.line{display: flex;width:100%;flex-wrap: wrap;}
