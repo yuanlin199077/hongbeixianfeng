@@ -32,7 +32,7 @@
 			.line{width:80%;margin: auto;display: flex;justify-content: space-between;font-size: 0.9rem;}
 			.line>div{display:flex;margin:1rem;border:4px solid white;width:50%;}
 			.line>div>div{height:15rem;}
-			.line>div img{height:100%}
+			.line>div img{height:100%;}
 			.line>div .con{background: rgba(255,0,0,0.2);color:white;overflow: auto;}
 			.line>div .con h2{color:white;padding:0.5rem}
 			.line>div .con p{color:white;}
@@ -41,8 +41,9 @@
 			.info_con{width:80%;margin:auto;padding-bottom: 2rem;}
 			.info_title{color: #cdba96;text-align: center;font-size: 3rem;background:rgba(255,0,0,0.2)}
 			.info_item{display: flex;background: rgba(255,0,0,0.2);border:4px solid #fff;margin:1rem;}
-			.info_item img{width:24rem;height:100%}
-			.info_item_right{border-left: 3px solid #cdba96;padding:1rem;margin:2rem;line-height: 2rem;}
+			.info_item img{height:100%;width:100%}
+			.info_item_left{width:30%}
+			.info_item_right{border-left: 3px solid #cdba96;padding:1rem;margin:2rem;line-height: 2rem;width:70%}
 			/*下载*/
 			#downLoad{background:rgba(255,0,0,0.2);display: flex;justify-content:center}
 			.downLoad{padding:5rem}
@@ -85,16 +86,19 @@
 		    	.swiper-slide .text h1{font-size: 1rem;}
 		    	.swiper-slide .text p{width:70%;}
 				.video{width:100%;border:5px solid black;border:none}
+				.video p{padding:2rem}
 				.player-size {float: none;width:100%}
 				.idea{width:100%;border:none;flex-wrap: wrap;flex-direction:column;}
 				.idea_line{justify-content:space-around;width: 100%;}
-				.welcome-text{width:14rem;height:14rem;border-radius: 7rem;}
+				.welcome-text{width:12rem;height:12rem;border-radius: 7rem;}
+				.welcome-text h4{padding:2rem}
 				.ceo{width:100%;border:none;}
 				.ceo_info{line-height: 2rem;}
 				.line{display: flex;width:100%;flex-wrap: wrap;}
 				.line>div{width:100%;}
 				.info_con{width:100%;}
 				.info_item{margin:0}
+				.info_item_right{border-left: 2px solid #cdba96;padding:0rem;margin:1rem;line-height: 2rem;}
 				#downLoad{flex-wrap: wrap;}
 				.downLoad{width:100%;text-align: center;}
 				.contact{width:100%;margin: auto;display: flex;}
