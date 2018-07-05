@@ -33,7 +33,7 @@
 			.line>div{display:flex;margin:1rem;border:4px solid white;width:50%;}
 			.line>div>div{height:15rem;}
 			.line_left{width:30%}
-			.line>div img{height:100%;}
+			.line>div img{height:100%;width:100%}
 			.line>div .con{background: rgba(0,0,0,0.2);color:white;overflow: auto;width:70%}
 			.line>div .con h2{color:white;padding:0.5rem}
 			.line>div .con p{color:white;}
