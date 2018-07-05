@@ -99,7 +99,7 @@
 				.player-size {float: none;width:100%}
 				.idea{width:100%;border:none;flex-wrap: wrap;flex-direction:column;}
 				.idea_line{justify-content:space-around;width: 100%;}
-				.welcome-text{width:12rem;height:12rem;border-radius: 7rem;}
+				.welcome-text{width:14rem;height:14rem;border-radius: 7rem;margin:1rem}
 				.welcome-text h4{padding:2rem 2rem 1rem 2rem}
 				.ceo{width:100%;border:none;}
 				.ceo_info{line-height: 2rem;}
@@ -110,5 +110,5 @@
 				.info_item_right{border-left: 2px solid #cdba96;padding:0rem;margin:1rem;line-height: 2rem;}
 				#downLoad{flex-wrap: wrap;}
 				.downLoad{width:100%;text-align: center;}
-				.contact{width:100%;margin: auto;display: flex;}
+				.contact{width:100%;margin: auto;}
 			}	
